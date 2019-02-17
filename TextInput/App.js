@@ -36,6 +36,17 @@ export default class App extends React.Component {
     })
   }
 
+  itemDeletionHandler = (index) => {
+    console.log(index)
+    this.setState(prevState => {
+      return {
+        places: prevState.places.filter((place,i) => {
+           return i !== index;
+        })
+      }
+    })
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -43,7 +54,7 @@ export default class App extends React.Component {
         textChangeAction={this.placeNameChangeHandler}
         buttonAction={this.addButtonClickHandler}
         ></PlaceInput>
-       <PlaceList places={this.state.places}></PlaceList>
+       <PlaceList places={this.state.places} handleItemDeletion={this.itemDeletionHandler}></PlaceList>
       </View>
     );
   }

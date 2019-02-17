@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,StyleSheet} from 'react-native'
+import {View,StyleSheet,ScrollView} from 'react-native'
 import ListItem from '../ListItem/ListItem'
 
 const placeList = (props) => {
@@ -8,13 +8,12 @@ const placeList = (props) => {
         alert('Item pressed' + index)
     }
     const placeOutputHolder = props.places.map((place,index) => (
-        <ListItem key={index} placeName={place} handleItemTouch={ () => this.touchAction(index) }/>
+        <ListItem key={index} placeName={place} handleItemTouch={ () => props.handleItemDeletion(index) }/>
       ));
     return (
-        <View style={styles.listItemContainer}>{placeOutputHolder}</View> 
+        <ScrollView style={styles.listItemContainer}>{placeOutputHolder}</ScrollView> 
     )
 }
-
 
 const styles = StyleSheet.create({
     listItemContainer:{
