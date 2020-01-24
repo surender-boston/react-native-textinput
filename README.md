@@ -2,4 +2,3 @@
 
 Learning React Native Lessons
 TextInput 
-//Read End
