@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import PlaceList from './src/components/PlaceList/PlaceList';
 import PlaceInput from './src/components/PlaceInput/PlaceInput';
 
-//Changed Govind 2
+//Changed text by Govind 3
 export default class App extends React.Component {
 
   state = {
