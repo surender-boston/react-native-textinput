@@ -10,7 +10,7 @@ export default class App extends React.Component {
     placeName: "",
     places: []
   }
-
+//Govind
   //input text handler
   placeNameChangeHandler = (val) => {
     this.setState({
